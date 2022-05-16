@@ -4,5 +4,5 @@ export interface Farmer {
     description: string
     approvedCertifications: string[]
     pendingCertifications: string[]
-    websiteUrl: string[]
+    websiteUrl: string
 }
