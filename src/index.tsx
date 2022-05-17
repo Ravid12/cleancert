@@ -10,14 +10,16 @@ import {
 } from "react-router-dom";
 import { HomePage } from './view/pages/Home/Home';
 import { AddCertification } from './view/pages/AddCertification/AddCertificationPage';
+import { Register } from './view/pages/Register/Register';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="home" element={<HomePage />} />
+      <Route path="/" element={<HomePage />} />
       <Route path="addcertification" element={<AddCertification />} />
+      <Route path="register" element={<Register />} />
+
     </Routes>  </BrowserRouter>
 );
 
