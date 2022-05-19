@@ -1,0 +1,11 @@
+.p-card {
+  color: black;
+}
+
+.p-card .p-card-body {
+  padding: 1.75rem;
+}
+
+.p-card .p-card-title {
+  font-size: 2rem;
+}

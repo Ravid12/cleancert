@@ -7,8 +7,9 @@ import "primereact/resources/themes/saga-blue/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import "primeflex/primeflex.css";
+import { timeSince } from "../timeSince";
 
-export type FormEntryProps = {
+export type ForumEntryProps = {
   id: string;
   time: number;
   tag: string;
@@ -17,7 +18,7 @@ export type FormEntryProps = {
   className?: string
 };
 
-export const FormEntry = ({ id, time, tag, title, commentCount, className}: FormEntryProps) => {
+export const ForumEntry = ({ id, time, tag, title, commentCount, className}: ForumEntryProps) => {
   const heading = (
     <div>
       <div className="flex align-items-center justify-content-between flex-wrap">
@@ -44,32 +45,3 @@ export const FormEntry = ({ id, time, tag, title, commentCount, className}: Form
     </Card>
   );
 };
-
-
-const timeSince = (date: number) => {
-
-  var seconds = Math.floor((Date.now() - date) / 1000);
-
-  var interval = seconds / 31536000;
-
-  if (interval > 1) {
-    return Math.floor(interval) + " years ago";
-  }
-  interval = seconds / 2592000;
-  if (interval > 1) {
-    return Math.floor(interval) + " months ago";
-  }
-  interval = seconds / 86400;
-  if (interval > 1) {
-    return Math.floor(interval) + " days ago";
-  }
-  interval = seconds / 3600;
-  if (interval > 1) {
-    return Math.floor(interval) + " hours ago";
-  }
-  interval = seconds / 60;
-  if (interval > 1) {
-    return Math.floor(interval) + " minutes ago";
-  }
-  return Math.floor(seconds) + " seconds ago";
-}

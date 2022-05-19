@@ -6,6 +6,7 @@ import "primereact/resources/themes/saga-blue/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import "primeflex/primeflex.css";
+import { ForumTopic } from "../../components/Forum/ForumTopic/ForumTopic";
 
 export const HomePage = () => {
   const navigate = useNavigate();
@@ -31,6 +32,15 @@ export const HomePage = () => {
         Green farming Certification believes in helping those who strive for a
         more sustainable future.
       </div>
+
+      <ForumTopic 
+        profileName="Husk-Hunter Zara"
+        content="Hey so I had this huge revelation the other day about how to recycle my cocnut husks! Lorem ipsum dolor sit amet, dolore magna aliqua lorem ipsum dolor sit amet, dolore magna aliqua lorem ipsum dolor sit amet, dolore magna aliqua lorem ipsum dolor sit amet, dolore magna aliqua lorem ipsum dolor sit amet"
+        time={new Date().setMinutes(0)}
+        tag="Reusing Waste"
+        title="Recycling your husk"
+        commentCount={16}
+      />
     </>
   );
 };
