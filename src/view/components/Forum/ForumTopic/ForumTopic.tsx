@@ -9,6 +9,7 @@ import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import "primeflex/primeflex.css";
 import { timeSince } from "../timeSince";
+import { buildClassName } from "../../../common/buildClassName";
 
 export type ForumTopicProps = {
   profileName: string;
@@ -52,7 +53,7 @@ export const ForumTopic = ({ profileName, time, tag, title, commentCount, conten
 
   return ( 
     <>
-      <Card title={title} subTitle={heading} footer={buttons} className={(className ? className : "") + "forum-topic-card"}>
+      <Card title={title} subTitle={heading} footer={buttons} className={buildClassName(className, "forum-topic-card")}>
       </Card>
     </>
   );

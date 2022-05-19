@@ -8,6 +8,7 @@ import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import "primeflex/primeflex.css";
 import { timeSince } from "../timeSince";
+import { buildClassName } from "../../../common/buildClassName";
 
 export type ForumCommentProps = {
   time: number;
@@ -47,7 +48,7 @@ export const ForumComment = ({ time, profileName, comment, commentCount, classNa
   )
 
   return ( 
-    <Card title={heading} footer={buttons} className={className}>
+    <Card title={heading} footer={buttons} className={buildClassName(className, "comment")}>
     </Card>
   );
 };

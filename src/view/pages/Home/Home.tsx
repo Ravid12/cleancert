@@ -6,9 +6,6 @@ import "primereact/resources/themes/saga-blue/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import "primeflex/primeflex.css";
-import { ForumTopic } from "../../components/Forum/ForumTopic/ForumTopic";
-import { ForumEntry } from "../../components/Forum/ForumEntry/ForumEntry";
-import { ForumComment } from "../../components/Forum/ForumComment/ForumComment";
 
 export const HomePage = () => {
   const navigate = useNavigate();

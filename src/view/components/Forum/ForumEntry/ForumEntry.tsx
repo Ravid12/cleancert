@@ -8,6 +8,7 @@ import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import "primeflex/primeflex.css";
 import { timeSince } from "../timeSince";
+import { buildClassName } from "../../../common/buildClassName";
 
 export type ForumEntryProps = {
   id: string;
@@ -41,7 +42,7 @@ export const ForumEntry = ({ id, time, tag, title, commentCount, className}: For
   )
 
   return ( 
-    <Card title={heading} footer={buttons} className={className}>
+    <Card title={heading} footer={buttons} className={buildClassName(className, "form-entry-card")}>
     </Card>
   );
 };

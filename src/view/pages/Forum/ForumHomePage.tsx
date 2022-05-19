@@ -7,6 +7,7 @@ import "primeicons/primeicons.css";
 import "primeflex/primeflex.css";
 import { ForumEntry as ForumEntryModel } from "../../../server/models/ForumEntry";
 import { ForumEntry } from "../../components/Forum/ForumEntry/ForumEntry";
+import { Header } from "../../components/Common/Header/Header";
 
 export const ForumHomePage = () => {
   const navigate = useNavigate();
@@ -40,15 +41,17 @@ export const ForumHomePage = () => {
 
   return (
     <div className="forum">
+      <Header currentPage="forum"/>
       {entries.map((entry) => {
-        console.log(entry.title)
         return (
           <ForumEntry
+            key={entry.title}
             id={entry.title}
             time={entry.time}
             tag={entry.tag}
             title={entry.title}
             commentCount={entry.commentCount}
+            className="m-3"
           />
       )})}
     </div>
