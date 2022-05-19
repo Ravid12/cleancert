@@ -72,11 +72,13 @@ export const Register = () => {
   );
 
   return (
-    <><div className="flex justify-content-start flex-wrap mt-6 ml-6 mr-6">
-      <div>
-        <Button icon="pi pi-arrow-left" className="p-button-text" onClick={onBackButtonClicked}/>
+    <>
+      <div className="flex justify-content-start flex-wrap mt-6 ml-6 mr-6">
+        <div>
+          <Button icon="pi pi-arrow-left" className="p-button-text" onClick={onBackButtonClicked} />
+        </div>
       </div>
-    </div><div className="ml-4 mr-4">
+      <div className="ml-4 mr-4">
         <Dialog
           visible={showMessage}
           onHide={() => setShowMessage(false)}

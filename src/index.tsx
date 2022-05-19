@@ -1,7 +1,5 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { App } from './App';
 import reportWebVitals from './reportWebVitals';
 import {
   BrowserRouter,
@@ -9,16 +7,17 @@ import {
   Route,
 } from "react-router-dom";
 import { HomePage } from './view/pages/Home/Home';
-import { AddCertification } from './view/pages/AddCertification/AddCertificationPage';
 import { Register } from './view/pages/Register/Register';
+import { SignIn } from './view/pages/SignIn/SignIn';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="addcertification" element={<AddCertification />} />
       <Route path="register" element={<Register />} />
+      <Route path="signin" element={<SignIn />} />
+
 
     </Routes>  </BrowserRouter>
 );

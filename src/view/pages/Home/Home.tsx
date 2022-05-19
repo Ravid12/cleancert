@@ -11,7 +11,7 @@ export const HomePage = () => {
   const navigate = useNavigate();
 
   const signInClicked = () => {
-    navigate("/register");
+    navigate("/signIn");
   };
 
   return (

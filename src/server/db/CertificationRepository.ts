@@ -10,10 +10,11 @@ class CertificationRepository {
    * adds a Certification to the database
    * @param Certification Certification item to add to db
    */
-  async createCertification(Certification: Certification) {
+  async createCertification(certification: Certification) {
+    alert(`create cert called with ${certification.name} ${certification.description}`)
     try {
       const docRef = await addDoc(collection(db, "Certification"), {
-        Certification,
+        certification,
       });
       console.log("Certification written with ID: ", docRef.id);
     } catch (e) {
@@ -24,7 +25,6 @@ class CertificationRepository {
   async addTestData() {
     console.log("creating test Certification");
     const testCertification: Certification = {
-      id: "test",
       name: "UTZ Eco Certified",
       description:
         "For coconut farms which have been through rigourous clean and green testing",
