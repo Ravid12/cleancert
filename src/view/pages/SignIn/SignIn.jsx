@@ -23,9 +23,6 @@ export const SignIn = () => {
         if (!data.email) {
             errors.email = 'Email is required.';
         }
-        else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}$/i.test(data.email)) {
-            errors.email = 'Invalid email address. E.g. example@email.com';
-        }
 
         if (!data.password) {
             errors.password = 'Password is required.';
@@ -42,7 +39,7 @@ export const SignIn = () => {
         setFormData(data);
         setShowMessage(true);
 
-        form.restart();
+        navigate("/forum")
     };
 
     const isFormFieldValid = (meta) => !!(meta.touched && meta.error);
