@@ -1,8 +1,7 @@
 import { Card } from "primereact/card";
-import { Tag } from 'primereact/tag';
 import { Button } from "primereact/button";
 import { Divider } from 'primereact/divider';
-import "./ForumTopic.css"
+import "./ForumComment.css"
 
 import "primereact/resources/themes/saga-blue/theme.css";
 import "primereact/resources/primereact.min.css";
@@ -10,31 +9,28 @@ import "primeicons/primeicons.css";
 import "primeflex/primeflex.css";
 import { timeSince } from "../timeSince";
 
-export type ForumTopicProps = {
-  profileName: string;
-  content: string;
+export type ForumCommentProps = {
   time: number;
-  tag: string;
-  title: string;
+  profileName: string;
   commentCount: number;
+  comment: string;
   className?: string
 };
 
-export const ForumTopic = ({ profileName, time, tag, title, commentCount, content, className}: ForumTopicProps) => {
+export const ForumComment = ({ time, profileName, comment, commentCount, className}: ForumCommentProps) => {
   const heading = (
-    <div className="mt-5">
+    <div>
       <div className="flex align-items-center justify-content-between flex-wrap">
         <div className="time text-500 text-base font-light">
           {timeSince(time)}
         </div>
-        <Tag value={tag}/>
       </div>
-      <Divider className="mb-4"/>
+      <Divider />
       <div className="profileName text-900 text-lg font-bold mb-3">
         {profileName}
       </div>
       <div className="topicContent text-lg font-normal text-800">
-        {content}
+        {comment}
       </div>
     </div>
     
@@ -51,9 +47,7 @@ export const ForumTopic = ({ profileName, time, tag, title, commentCount, conten
   )
 
   return ( 
-    <>
-      <Card title={title} subTitle={heading} footer={buttons} className={(className ? className : "") + "forum-topic-card"}>
-      </Card>
-    </>
+    <Card title={heading} footer={buttons} className={className}>
+    </Card>
   );
 };
