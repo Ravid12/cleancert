@@ -10,6 +10,7 @@ import { HomePage } from './view/pages/Home/Home';
 import { Register } from './view/pages/Register/Register';
 import { SignIn } from './view/pages/SignIn/SignIn';
 import { ForumHomePage } from './view/pages/Forum/ForumHomePage';
+import { ForumThread } from './view/components/Forum/ForumThread/ForumThread';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,10 +20,9 @@ root.render(
       <Route path="register" element={<Register />} />
       <Route path="signin" element={<SignIn />} />
       <Route path="forum" element={<ForumHomePage />} />
-
-
-
-    </Routes>  </BrowserRouter>
+      <Route path="forum/1" element={<ForumThread id='1'/>}/>
+    </Routes>  
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

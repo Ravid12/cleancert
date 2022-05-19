@@ -16,10 +16,15 @@ export type ForumEntryProps = {
   tag: string;
   title: string;
   commentCount: number;
+  goToThread: Function;
   className?: string
 };
 
-export const ForumEntry = ({ id, time, tag, title, commentCount, className}: ForumEntryProps) => {
+export const ForumEntry = ({ id, time, tag, title, commentCount, goToThread, className}: ForumEntryProps) => {
+  const topicClicked = () => {
+    goToThread(id)
+  }
+
   const heading = (
     <div>
       <div className="flex align-items-center justify-content-between flex-wrap">
@@ -36,7 +41,7 @@ export const ForumEntry = ({ id, time, tag, title, commentCount, className}: For
 
   const buttons = (
     <div className="flex justify-content-start flex-wrap card-container">
-      <Button label={commentCount.toString()} icon="pi pi-comment" iconPos="left" className="p-button-text"/>
+      <Button label={commentCount.toString()} icon="pi pi-comment" iconPos="left" className="p-button-text" onClick={topicClicked}/>
       <Button label="Translate" icon="pi pi-comments" iconPos="left" className="p-button-text"/>
     </div>
   )
