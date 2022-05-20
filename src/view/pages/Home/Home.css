@@ -1,0 +1,126 @@
+@font-face {
+  font-family: NotoSansReg;
+  src: url("../../../Noto_Sans_HK/NotoSansHK-Regular.otf");
+}
+
+@font-face {
+  font-family: NotoSansBold;
+  src: url("../../../Noto_Sans_HK/NotoSansHK-Bold.otf");
+}
+
+@font-face {
+  font-family: NotoSansBlack;
+  src: url("../../../Noto_Sans_HK/NotoSansHK-Black.otf");
+}
+
+.home {
+  font-family: NotoSans !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.header-container {
+  position: relative;
+  width: 100%;
+}
+
+.header-image {
+  filter: brightness(65%);
+  width: 100%;
+}
+
+.centered {
+  position: absolute;
+  top: 30%;
+  float: left;
+  width: 95%;
+}
+
+.centered .p-button-label {
+  font-family: NotoSansBold !important;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.centered .text {
+  font-family: NotoSansBold !important;
+  color: white;
+  font-weight: 1600;
+  padding-right: 0.5em;
+}
+
+.yellow {
+  background-color: #FFDD66;
+  border: #FFDD66;
+  color: #284606;
+}
+
+
+
+.stats-card {
+  margin-top: -2em;
+  padding-top: 1em;
+  background-color: #2E2538;
+  color: white;
+}
+
+.statistic-text {
+  font-family: NotoSansReg;
+}
+
+.statistic-percent {
+  font-family: NotoSansBlack;
+}
+
+.case-studies-card .case-studies-heading {
+  font-family: NotoSans !important;
+}
+
+.case-studies-image {
+  position: relative;
+  z-index: 10;
+}
+
+.case-studies-text {
+  background-color: white;
+  padding: 1em;
+  font-family: NotoSansBlack !important;
+  font-weight: 1000 !important;
+  
+  position: absolute;
+  bottom: -25%;
+  float: left;
+  width: 90%;
+}
+
+.case-studies-buttons {
+  margin-top: 4em;
+}
+
+.case-studies-buttons .p-button {
+  color: #175235;
+}
+
+.join-card {
+  background-color: #FFDD66;
+}
+
+.join-heading {
+  font-family: NotoSans !important;
+}
+
+.green {
+  background-color: #175235;
+  border: #175235;
+  color: white;
+  width: 100%;
+}
+
+.resources-card {
+  background-color: #175235;
+  color: white;
+}
+
+.resources-links {
+  color: #FFDD66;
+}

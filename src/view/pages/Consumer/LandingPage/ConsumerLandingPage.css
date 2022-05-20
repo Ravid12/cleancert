@@ -1,0 +1,112 @@
+@font-face {
+  font-family: NotoSansReg;
+  src: url("../../../../Noto_Sans_HK/NotoSansHK-Regular.otf");
+}
+
+@font-face {
+  font-family: NotoSansBold;
+  src: url("../../../../Noto_Sans_HK/NotoSansHK-Bold.otf");
+}
+
+@font-face {
+  font-family: NotoSansBlack;
+  src: url("../../../../Noto_Sans_HK/NotoSansHK-Black.otf");
+}
+
+@font-face {
+  font-family: NotoSansLight;
+  src: url("../../../../Noto_Sans_HK/NotoSansHK-Light.otf");
+}
+
+.coco-landing-page {
+  font-family: NotoSansReg;
+}
+
+.coco-header-container {
+  position: relative;
+  width: 100%;
+}
+
+.coco-header-image {
+  width: 100%;
+}
+
+.centered {
+  position: absolute;
+  top: 30%;
+  float: left;
+  width: 95%;
+}
+
+.coco-title-card {
+  background-color: #2E2538;
+  color: white;
+  font-family: NotoSansBold !important;
+  margin-top: -10px;
+}
+
+.mission-card-title {
+  font-family: NotoSans !important;
+  color: #2E2538;
+}
+
+.mission-card-text {
+  font-family: NotoSansLight !important;
+  color: #505248;
+}
+
+.howToHelp-card {
+  background-color: #F6F6FA;
+}
+
+.howToHelp-card-title {
+  font-family: NotoSans !important;
+  color: #2E2538;
+}
+
+.howToHelp-card-text {
+  font-family: NotoSansLight !important;
+  color: #505248;
+}
+
+.farmers-card-title {
+  font-family: NotoSans !important;
+  color: #2E2538;
+}
+
+.farmers-card-text {
+  font-family: NotoSansLight !important;
+  color: #505248;
+}
+
+.green {
+  background-color: #175235;
+  border: #175235;
+  color: white;
+  width: 100%;
+}
+
+.farmers-image {
+  width: 100%;
+}
+
+.recycle-card {
+  background-color: #2E2538;
+}
+
+.recycle-card-title {
+  font-family: NotoSans !important;
+  color: white;
+}
+
+.recycle-card-text {
+  font-family: NotoSansLight !important;
+  color: white;
+}
+
+.yellow {
+  background-color: #FFDD66;
+  border: #FFDD66;
+  color: #2E2538;
+  width: 100%;
+}
